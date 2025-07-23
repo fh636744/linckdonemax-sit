@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>لینک‌دونی مکس</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Vazir', sans-serif;
+      background: #0d0d0d;
+      color: white;
+      direction: rtl;
+      overflow-x: hidden;
+    }
+
+    .section {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .intro {
+      background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+    }
+
+    .intro h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #00e676;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+
+    .intro img {
+      max-width: 250px;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #1f6feb;
+      color: white;
+      text-decoration: none;
+      padding: 0.8rem 2rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #388bfd;
+      transform: translateY(-2px);
+    }
+
+    .main {
+      display: none;
+      background: url('https://www.transparenttextures.com/patterns/black-linen.png');
+      backdrop-filter: blur(10px);
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      padding: 2rem;
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .main h2 {
+      color: #58a6ff;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .version {
+      color: #00e676;
+      margin-bottom: 1rem;
+    }
+
+    .footer {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 3rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- صفحه معرفی -->
+  <div class="section intro" id="intro">
+    <h1>با لینک‌دونی مکس همیشه بروز باش!</h1>
+    <p>دسترسی سریع به گروه‌های پرمخاطب روبیکا، دانلود مستقیم برنامه، و ورود به چنل رسمی</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/709/709699.png" alt="برنامه لینک‌دونی مکس" />
+    <br>
+    <a class="btn" onclick="showMain()">ورود به برنامه</a>
+  </div>
+
+  <!-- صفحه اصلی -->
+  <div class="section main" id="main">
+    <div class="glass">
+      <h2>لینک‌دونی مکس</h2>
+      <div class="version">نسخه اصلی</div>
+      <p>بهترین مرجع برای دسترسی به گروه‌های فعال روبیکا<br>@linkmax</p>
+
+      <a href="https://rubika.ir/joinc/BJHEJBIB0EXHAFRKMUIUFBBQVTHPLQLH" target="_blank" class="btn">
+        باز کردن روبیکا
+      </a>
+      <br>
+      <a href="https://uploadkon.ir/uploads/0f4823_25linkmax-1-7.zip" class="btn" download>
+        دانلود برنامه
+      </a>
+    </div>
+    <div class="footer">
+      ساخته شده با ❤️ توسط Litebase Page Builder
+    </div>
+  </div>
+
+  <script>
+    function showMain() {
+      document.getElementById("intro").style.display = "none";
+      document.getElementById("main").style.display = "flex";
+    }
+  </script>
+
+</body>
+</html>
