@@ -4,139 +4,174 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>لینک‌دونی مکس</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Vazir', sans-serif;
-      background: #0d0d0d;
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(135deg, #0a0a0a, #111);
       color: white;
-      direction: rtl;
       overflow-x: hidden;
     }
 
-    .section {
-      width: 100%;
+    .hero {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
       text-align: center;
+      padding: 2rem;
+      background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
     }
 
-    .intro {
-      background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+    .hero img {
+      width: 140px;
+      height: 140px;
+      border-radius: 30px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      margin-bottom: 2rem;
     }
 
-    .intro h1 {
-      font-size: 2.2rem;
+    .hero h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #00e676, #1f6feb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       margin-bottom: 1rem;
-      color: #00e676;
     }
 
-    .intro p {
+    .hero p {
       font-size: 1.1rem;
       color: #ccc;
       margin-bottom: 2rem;
     }
 
-    .intro img {
-      max-width: 250px;
-      border-radius: 20px;
-      margin-bottom: 2rem;
-    }
-
-    .btn {
-      display: inline-block;
+    .btn-main {
       background: #1f6feb;
       color: white;
-      text-decoration: none;
       padding: 0.8rem 2rem;
-      border-radius: 12px;
-      font-size: 1rem;
-      transition: background 0.3s ease, transform 0.2s ease;
+      border-radius: 15px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba(31, 111, 235, 0.4);
+      transition: all 0.3s ease;
     }
 
-    .btn:hover {
+    .btn-main:hover {
       background: #388bfd;
-      transform: translateY(-2px);
+      transform: scale(1.05);
     }
 
-    .main {
-      display: none;
-      background: url('https://www.transparenttextures.com/patterns/black-linen.png');
-      backdrop-filter: blur(10px);
+    .features {
+      background: #0b0b0b;
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .glass {
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .card {
       background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
       border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       padding: 2rem;
-      margin: 2rem auto;
-      width: 90%;
-      max-width: 500px;
       text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
     }
 
-    .main h2 {
-      color: #58a6ff;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+    .card:hover {
+      transform: translateY(-5px);
     }
 
-    .version {
+    .card h2 {
       color: #00e676;
       margin-bottom: 1rem;
     }
 
+    .card p {
+      color: #bbb;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-card {
+      background: #1f6feb;
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-card:hover {
+      background: #388bfd;
+    }
+
     .footer {
-      font-size: 0.8rem;
-      color: #666;
-      margin-top: 3rem;
       text-align: center;
+      color: #777;
+      font-size: 0.85rem;
+      padding: 2rem 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .card-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- صفحه معرفی -->
-  <div class="section intro" id="intro">
-    <h1>با لینک‌دونی مکس همیشه بروز باش!</h1>
-    <p>دسترسی سریع به گروه‌های پرمخاطب روبیکا، دانلود مستقیم برنامه، و ورود به چنل رسمی</p>
-    <img src="https://cdn-icons-png.flaticon.com/512/709/709699.png" alt="برنامه لینک‌دونی مکس" />
-    <br>
-    <a class="btn" onclick="showMain()">ورود به برنامه</a>
-  </div>
+  <!-- بخش معرفی -->
+  <section class="hero">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." alt="آیکون لینک‌دونی مکس">
+    <h1>با لینک‌دونی مکس همیشه تو بازی بمون!</h1>
+    <p>جای خاصی برای پیدا کردن گروه‌های خفن روبیکا، بدون گشتن زیاد و بدون دردسر!</p>
+    <a class="btn-main" href="#features">شروع کن</a>
+  </section>
 
-  <!-- صفحه اصلی -->
-  <div class="section main" id="main">
-    <div class="glass">
-      <h2>لینک‌دونی مکس</h2>
-      <div class="version">نسخه اصلی</div>
-      <p>بهترین مرجع برای دسترسی به گروه‌های فعال روبیکا<br>@linkmax</p>
+  <!-- بخش امکانات -->
+  <section class="features" id="features">
+    <div class="card-container">
 
-      <a href="https://rubika.ir/joinc/BJHEJBIB0EXHAFRKMUIUFBBQVTHPLQLH" target="_blank" class="btn">
-        باز کردن روبیکا
-      </a>
-      <br>
-      <a href="https://uploadkon.ir/uploads/0f4823_25linkmax-1-7.zip" class="btn" download>
-        دانلود برنامه
-      </a>
+      <!-- کارت روبیکا -->
+      <div class="card">
+        <h2>ورود به چنل رسمی روبیکا</h2>
+        <p>با یک کلیک وارد چنل رسمی لینک‌دونی مکس در روبیکا شو و به جمع هزاران کاربر فعال بپیوند.</p>
+        <a class="btn-card" target="_blank" href="https://rubika.ir/joinc/BJHEJBIB0EXHAFRKMUIUFBBQVTHPLQLH">
+          باز کردن روبیکا
+        </a>
+      </div>
+
+      <!-- کارت دانلود -->
+      <div class="card">
+        <h2>دانلود نسخه اصلی برنامه</h2>
+        <p>با نصب برنامه لینک‌دونی مکس همیشه سریع‌تر از همه عضو گروه‌های تاپ روبیکا شو.</p>
+        <a class="btn-card" download href="https://uploadkon.ir/uploads/0f4823_25linkmax-1-7.zip">
+          دانلود برنامه
+        </a>
+      </div>
+
     </div>
-    <div class="footer">
-      ساخته شده با ❤️ توسط Litebase Page Builder
-    </div>
-  </div>
+  </section>
 
-  <script>
-    function showMain() {
-      document.getElementById("intro").style.display = "none";
-      document.getElementById("main").style.display = "flex";
-    }
-  </script>
+  <!-- فوتر -->
+  <footer class="footer">
+    ساخته شده با ❤️ توسط @linkmax | تمامی حقوق محفوظ است
+  </footer>
 
 </body>
-</html>
